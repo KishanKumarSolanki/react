@@ -1,0 +1,68 @@
+/* Ensure the text is centered for the heading */
+.text-center {
+  text-align: center;
+}
+
+/* Add margin for spacing above/below the heading if needed */
+.my-4 {
+  margin-top: 1.5rem; /* Example: adjust as per your design system */
+  margin-bottom: 1.5rem; /* Example: adjust as per your design system */
+}
+
+/* Flexbox container for the cards */
+.cards-container {
+  display: flex; /* Makes the container a flex container */
+  flex-wrap: wrap; /* Allows cards to wrap to the next line if space runs out */
+  justify-content: space-around; /* Distributes items evenly with space around them */
+  gap: 20px; /* Adds a gap between flex items (cards) */
+  padding: 20px; /* Optional: Adds some padding around the container */
+}
+
+/* Styles for individual cards */
+.card {
+  /* Set a consistent width for all cards,
+     so you can remove inline styles from JSX */
+  width: 18rem; /* 18rem is roughly 288px */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensures image corners are rounded if card has border-radius */
+  display: flex; /* Optional: Make card content flex if you want inner layout control */
+  flex-direction: column; /* Stacks image and body vertically within the card */
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  display: block; /* Removes extra space below image */
+}
+
+.card-body {
+  padding: 1rem;
+  flex-grow: 1; /* Allows card body to take up available space, pushing footer down */
+  display: flex; /* Make card body a flex container to push elements */
+  flex-direction: column;
+}
+
+.card-title {
+  margin-bottom: 0.75rem;
+}
+
+.card-text {
+  margin-bottom: 1rem;
+  flex-grow: 1; /* Allows text to take available space */
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
