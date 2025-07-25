@@ -49,7 +49,7 @@ function Card() {
       {/* This is the new flex container */}
       <div className="cards-container"> 
         <div className="card"> {/* Consider adding width to CSS for consistency */}
-          <img src="images/stem" className="card-img-top" alt="..." />
+          <img src="images/stem.jpg" className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">STEM</h5>
             <p className="card-text"> Focus on Science, Technology, Engineering, and Mathematics (e.g., robotics kits, circuit builders, chemistry sets, coding games).</p>
