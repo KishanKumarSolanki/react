@@ -41,7 +41,7 @@ function Slider() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="images/banner.png" // Ensure this path is correct relative to your public folder
+            src="images/banner2.jpg" // Ensure this path is correct relative to your public folder
             alt="Third slide"
             style={{ maxHeight: '400px', objectFit: 'cover' }}
           />
