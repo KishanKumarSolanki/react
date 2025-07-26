@@ -3,7 +3,7 @@ import Carousel from 'react-bootstrap/Carousel'; // Import Carousel component
 
 function Slider() {
   return (
-    <div style={{ maxWidth: '1270px', maxHeight:'300', margin: 'auto', marginTop: '20px' }}>
+    <div style={{ maxWidth: '1270px', maxHeight:'300', margin: 'auto', marginTop: '0px' }}>
       {/* react-bootstrap Carousel component */}
       <Carousel
         interval={3000} // Set interval for automatic sliding (e.g., 3000ms = 3 seconds)
