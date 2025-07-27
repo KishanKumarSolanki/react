@@ -1,5 +1,8 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel'; // Import Carousel component
+import banner from '../banner.png';
+import banner1 from '../banner1.png'; 
+import banner2 from '../banner2.jpg'; 
 
 function Slider() {
   return (
@@ -14,7 +17,7 @@ function Slider() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="images/banner.png" // Ensure this path is correct relative to your public folder
+            src={banner} // Ensure this path is correct relative to your public folder
             alt="First slide"
             style={{ maxHeight: '400px', objectFit: 'cover' }} // Add some styling
           />
@@ -28,7 +31,7 @@ function Slider() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="images/banner1.png" // Ensure this path is correct relative to your public folder
+            src={banner1} // Ensure this path is correct relative to your public folder
             alt="Second slide"
             style={{ maxHeight: '400px', objectFit: 'cover' }}
           />
@@ -41,7 +44,7 @@ function Slider() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="images/banner2.jpg" // Ensure this path is correct relative to your public folder
+            src={banner2} // Ensure this path is correct relative to your public folder
             alt="Third slide"
             style={{ maxHeight: '400px', objectFit: 'cover' }}
           />

@@ -8,7 +8,7 @@ import Card1 from './assets/components/Card1.jsx'
 
 // Import Bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Card } from 'react-bootstrap'
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
