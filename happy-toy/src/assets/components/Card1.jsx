@@ -1,5 +1,5 @@
 import React from 'react';
-import './card1.css'; 
+import './card1.css';
 import teddy from '../teddy.png';
 import unicorn from '../unicorn.jpg';
 import lama from '../lama.jpg';
@@ -14,7 +14,7 @@ function Card() {
     <>
       <h1 className="text-center my-4">Our Soft Toys</h1>
       {/* This is the new flex container */}
-      <div className="cards-container"> 
+      <div className="cards-container">
         <div className="card"> {/* Consider adding width to CSS for consistency */}
           <img src={teddy} className="card-img-top" alt="..." />
           <div className="card-body">
@@ -55,7 +55,7 @@ function Card() {
 
       <h1 className="text-center my-4">Our Educational Toys</h1>
       {/* This is the new flex container */}
-      <div className="cards-container"> 
+      <div className="cards-container">
         <div className="card"> {/* Consider adding width to CSS for consistency */}
           <img src={stem} className="card-img-top" alt="..." />
           <div className="card-body">
@@ -75,7 +75,7 @@ function Card() {
         </div>
 
         <div className="card" style={{ width: '18rem' }}>
-          <img src={math}className="card-img-top" alt="..." />
+          <img src={math} className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">Building/Construction Toys</h5>
             <p className="card-text">Encourage creativity, problem-solving, fine motor skills, and spatial reasoning (e.g., LEGO, building blocks, Magna-Tiles, K'Nex).</p>

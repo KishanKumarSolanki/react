@@ -3,7 +3,7 @@ import teddy from '../teddy.png';
 
 function Navbar() {
     return (
-        
+
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">
@@ -32,7 +32,7 @@ function Navbar() {
                 </div>
             </div>
         </nav>
-        
+
     );
 }
 

@@ -1,18 +1,18 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel'; // Import Carousel component
 import banner from '../banner.png';
-import banner1 from '../banner1.png'; 
-import banner2 from '../banner2.jpg'; 
+import banner1 from '../banner1.png';
+import banner2 from '../banner2.jpg';
 
 function Slider() {
   return (
-    <div style={{ maxWidth: '1270px', maxHeight:'300', margin: 'auto', marginTop: '0px' }}>
+    <div style={{ maxWidth: '1270px', maxHeight: '300', margin: 'auto', marginTop: '0px' }}>
       {/* react-bootstrap Carousel component */}
       <Carousel
         interval={3000} // Set interval for automatic sliding (e.g., 3000ms = 3 seconds)
         pause="hover"   // Pause on mouse hover
-        // You can add more props like controls={false} for no prev/next buttons
-        // or indicators={false} for no bottom dots
+      // You can add more props like controls={false} for no prev/next buttons
+      // or indicators={false} for no bottom dots
       >
         <Carousel.Item>
           <img
