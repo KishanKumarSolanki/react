@@ -1,13 +1,13 @@
 import React from 'react';
 import './card1.css';
-import teddy from '../teddy.png';
-import unicorn from '../unicorn.jpg';
-import lama from '../lama.jpg';
-import miccy from '../miccy.png';
-import stem from '../stem.jpg';
-import puzzles from '../puzzles.jpg';
-import math from '../math.jpg';
-import counting from '../counting.jpg';
+import teddy from '../assets/teddy.png';
+import unicorn from '../assets/unicorn.jpg';
+import lama from '../assets/lama.jpg';
+import miccy from '../assets/miccy.png';
+import stem from '../assets/stem.jpg';
+import puzzles from '../assets/puzzles.jpg';
+import math from '../assets/math.jpg';
+import counting from '../assets/counting.jpg';
 
 function Card() {
   return (

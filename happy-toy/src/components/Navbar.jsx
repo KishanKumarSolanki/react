@@ -1,5 +1,5 @@
 import React from 'react';
-import teddy from '../teddy.png';
+import teddy from '../assets/teddy.png';
 
 function Navbar() {
     return (

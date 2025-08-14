@@ -1,8 +1,8 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel'; // Import Carousel component
-import banner from '../banner.png';
-import banner1 from '../banner1.png';
-import banner2 from '../banner2.jpg';
+import banner from '../assets/banner.png';
+import banner1 from '../assets/banner1.png';
+import banner2 from '../assets/banner2.jpg';
 
 function Slider() {
   return (
