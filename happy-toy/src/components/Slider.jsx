@@ -9,7 +9,7 @@ function Slider() {
     <div style={{ maxWidth: '1270px', maxHeight: '300', margin: 'auto', marginTop: '0px' }}>
       {/* react-bootstrap Carousel component */}
       <Carousel
-        interval={3000} // Set interval for automatic sliding (e.g., 3000ms = 3 seconds)
+        interval={2000} // Set interval for automatic sliding (e.g., 2000ms = 2 seconds)
         pause="hover"   // Pause on mouse hover
       // You can add more props like controls={false} for no prev/next buttons
       // or indicators={false} for no bottom dots
