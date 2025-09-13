@@ -12,6 +12,7 @@ const Card = () => {
         {items.map((items) => (
           <div className="col-lg-4 " key={items.id}>
             <div className="card" style={{ width: '18rem', margin: '10px' }}>
+              
               <img src={items.image} className="card-img-top" alt="" />
               <div className="card-body">
                 <h5 className="card-title">{items.name}</h5>

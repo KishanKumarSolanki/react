@@ -2,6 +2,8 @@ import React from 'react';
 import teddy from '../assets/teddy.png';
 import { FaShoppingCart, FaSearch, FaUser } from 'react-icons/fa';
 import './Navbar.css';
+import { Link } from 'react-router-dom';
+
 
 function Navbar() {
     const cartItemCount = 0; // Changed to 3 to match your screenshot
@@ -11,10 +13,11 @@ function Navbar() {
             <div className="container-fluid">
                 {/* Brand Logo with Cart Count */}
                 <div className="d-flex align-items-center">
-                    <a className="navbar-brand d-flex align-items-center me-0" href="#">
-                        <img src={teddy} alt="Happy Toy Logo" className="navbar-logo me-2" />
-                        <span className="navbar-brand-custom">Happy Toy</span>
-                    </a>
+                    <Link to="/" className="navbar-brand d-flex align-items-center me-0">
+                        <img src={teddy} alt="Logo" width="40" />
+                        <span className="navbar-brand-custom">Happy Toys</span>
+                    </Link>
+
                     {cartItemCount > 0 && (
                         <span className="cart-count-mobile d-lg-none ms-2">
                             ({cartItemCount})
@@ -23,13 +26,13 @@ function Navbar() {
                 </div>
 
                 {/* Mobile Toggle */}
-                <button 
-                    className="navbar-toggler navbar-toggler-custom" 
-                    type="button" 
-                    data-bs-toggle="collapse" 
-                    data-bs-target="#navbarContent" 
-                    aria-controls="navbarContent" 
-                    aria-expanded="false" 
+                <button
+                    className="navbar-toggler navbar-toggler-custom"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarContent"
+                    aria-controls="navbarContent"
+                    aria-expanded="false"
                     aria-label="Toggle navigation"
                 >
                     <span className="navbar-toggler-icon"></span>
@@ -69,10 +72,10 @@ function Navbar() {
                                 <span className="input-group-text search-icon-custom">
                                     <FaSearch />
                                 </span>
-                                <input 
-                                    className="form-control search-input-custom" 
-                                    type="search" 
-                                    placeholder="Find toys..." 
+                                <input
+                                    className="form-control search-input-custom"
+                                    type="search"
+                                    placeholder="Find toys..."
                                 />
                             </div>
                         </form>
@@ -87,7 +90,7 @@ function Navbar() {
                                 {cartItemCount > 0 && (
                                     <span className="cart-badge-custom badge rounded-pill">
                                         {cartItemCount}
-                                        <span className="visually-hidden">items in cart</span>
+                                        <Link className="visually-hidden">items in cart</Link>
                                     </span>
                                 )}
                             </button>

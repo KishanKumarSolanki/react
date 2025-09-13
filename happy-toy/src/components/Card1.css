@@ -27,10 +27,8 @@
 
 /* Styles for individual cards */
 .card {
-  /* Set a consistent width for all cards,
-     so you can remove inline styles from JSX */
+  
   width: 18rem;
-  /* 18rem is roughly 288px */
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
