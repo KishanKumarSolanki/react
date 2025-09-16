@@ -1,7 +1,7 @@
 // data.js
 // This file stores all of the product information in a structured array.
 import teddy from '../assets/teddy.png';
-import unicorn from '../assets/unicorn.jpg';
+import unicorn2 from '../assets/unicorn2.jpg';
 import lama from '../assets/lama.jpg';
 import miccy from '../assets/miccy.png';
 import stem from '../assets/stem.jpg';
@@ -24,7 +24,7 @@ import counting from '../assets/counting.jpg';
     id: '2',
     name: 'Plush Unicorn',
     description: 'A mythical creature brought to life in soft toy form.',
-    image: unicorn,
+    image: unicorn2,
     details: 'Bring magic into your home with this enchanting plush unicorn. Its shimmering horn and rainbow mane add a touch of sparkle. Crafted from a silky-soft fabric, this unicorn is designed to be both a toy and a beautiful decorative piece.',
     price: 35.00,
     category: 'soft-toys'
