@@ -1,5 +1,6 @@
 import React from 'react';
 import  items  from './data';
+import { Link } from 'react-router-dom';
 
 const Card = () => {
   if (!items || items.length === 0) {
@@ -10,10 +11,14 @@ const Card = () => {
     <div className="container my-5">
       <div className="row">
         {items.map((items) => (
-          <div className="col-lg-4 " key={items.id}>
+          <div className="col-lg-4 col-md-6"  key={items.id}>
             <div className="card" style={{ width: '18rem', margin: '10px' }}>
-              
+
+              <Link to={`/product/${items.id}`}
+               style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               <img src={items.image} className="card-img-top" alt="" />
+              </Link>
+
               <div className="card-body">
                 <h5 className="card-title">{items.name}</h5>
                 <p className="card-text">{items.description}</p>
