@@ -1,0 +1,19 @@
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img img{
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+}
+
+.container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
