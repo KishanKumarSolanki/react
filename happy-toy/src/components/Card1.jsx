@@ -23,9 +23,9 @@ const Card = () => {
                 <h5 className="card-title">{items.name}</h5>
                 {/* <p className="card-text">{items.description}</p> */}
                 <p className="card-text"><strong>Price: ₹{items.price}</strong></p>
-                <a href="#" className="btn btn-primary mx-3">
+                <Link to={`/product/${items.id}`} className="btn btn-primary mx-3">
                   {items.buttonText || 'View Details'}
-                </a>
+                </Link>
                 <a href="#" className="btn btn-warning">
                   {items.buttonText || 'Add to Cart'}
                 </a>

@@ -4,20 +4,21 @@ import { FaShoppingCart, FaSearch, FaUser } from 'react-icons/fa';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 
-
 function Navbar() {
-    const cartItemCount = 0; // Changed to 3 to match your screenshot
+    // In a real app, this would be a dynamic state, e.g., using useState or Context API
+    const cartItemCount = 0; 
 
     return (
         <nav className="navbar navbar-expand-lg navbar-custom">
             <div className="container-fluid">
-                {/* Brand Logo with Cart Count */}
+                {/* Brand Logo */}
                 <div className="d-flex align-items-center">
                     <Link to="/" className="navbar-brand d-flex align-items-center me-0">
                         <img src={teddy} alt="Logo" width="40" />
                         <span className="navbar-brand-custom">Happy Toys</span>
                     </Link>
 
+                    {/* Mobile Cart Count - Added check for count > 0 for display logic */}
                     {cartItemCount > 0 && (
                         <span className="cart-count-mobile d-lg-none ms-2">
                             ({cartItemCount})
@@ -25,7 +26,7 @@ function Navbar() {
                     )}
                 </div>
 
-                {/* Mobile Toggle */}
+                {/* Mobile Toggler - No changes needed here */}
                 <button
                     className="navbar-toggler navbar-toggler-custom"
                     type="button"
@@ -43,24 +44,28 @@ function Navbar() {
                     {/* Navigation Links - Centered */}
                     <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link nav-link-custom active" aria-current="page" href="#">
+                            {/* FIX: Use <Link> for internal navigation */}
+                            <Link to="/" className="nav-link nav-link-custom active" aria-current="page">
                                 Home
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link nav-link-custom" href="#">
+                            {/* FIX: Use <Link> for internal navigation */}
+                            <Link to="/shop" className="nav-link nav-link-custom">
                                 Shop
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link nav-link-custom" href="#">
+                            {/* FIX: Use <Link> for internal navigation */}
+                            <Link to="/about" className="nav-link nav-link-custom">
                                 About
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link nav-link-custom" href="#">
+                            {/* FIX: Use <Link> for internal navigation */}
+                            <Link to="/contact" className="nav-link nav-link-custom">
                                 Contact
-                            </a>
+                            </Link>
                         </li>
                     </ul>
 
@@ -82,18 +87,20 @@ function Navbar() {
 
                         {/* User and Cart Icons */}
                         <div className="d-flex">
-                            <button className="btn icon-button-custom me-2">
+                            {/* FIX: Use <Link> instead of <button> if this leads to a user profile page */}
+                            <Link to="/profile" className="btn icon-button-custom me-2">
                                 <FaUser size={18} />
-                            </button>
-                            <button className="btn icon-button-custom position-relative" aria-label="Shopping Cart">
+                            </Link>
+                            {/* FIX: Use <Link> instead of <button> if this leads to the cart page */}
+                            <Link to="/cart" className="btn icon-button-custom position-relative" aria-label={`Shopping Cart with ${cartItemCount} items`}>
                                 <FaShoppingCart size={20} />
                                 {cartItemCount > 0 && (
+                                    // FIX: Removed the unnecessary and problematic Link. The count is displayed correctly.
                                     <span className="cart-badge-custom badge rounded-pill">
                                         {cartItemCount}
-                                        <Link className="visually-hidden">items in cart</Link>
                                     </span>
                                 )}
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
