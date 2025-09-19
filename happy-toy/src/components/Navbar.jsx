@@ -45,16 +45,16 @@ function Navbar() {
                     <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li className="nav-item">
                             {/* FIX: Use <Link> for internal navigation */}
-                            <Link to="/" className="nav-link nav-link-custom active" aria-current="page">
+                            <Link to="/" className="nav-link nav-link-custom" aria-current="page">
                                 Home
                             </Link>
                         </li>
-                        <li className="nav-item">
-                            {/* FIX: Use <Link> for internal navigation */}
+                        {/* <li className="nav-item">
+                             FIX: Use <Link> for internal navigation 
                             <Link to="/shop" className="nav-link nav-link-custom">
                                 Shop
                             </Link>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                             {/* FIX: Use <Link> for internal navigation */}
                             <Link to="/about" className="nav-link nav-link-custom">
