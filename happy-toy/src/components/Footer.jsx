@@ -8,10 +8,9 @@ const Footer = () => {
         <footer className="footer">
             <div className="footer-content">
                 <div className="footer-section navigation">
-                    <h4>Quick Links</h4>
+                    <h4>Links</h4>
                     <nav>
                         <a href="/">Home</a>
-                        <a href="/shop">Shop</a>
                         <a href="/about">About</a>
                         <a href="/contact">Contact</a>
                     </nav>
@@ -20,7 +19,7 @@ const Footer = () => {
                 <div className="footer-section contact">
                     <h4>Contact Us</h4>
                     <address>
-                        <p>Email: <a href="mailto:hello@gmail.com">hello@gmail.com</a></p>
+                        <p>Email: <a href="mailto:hello@gmail.com">happytoys@gmail.com</a></p>
                         <p>Phone: <a href="tel:+911234567890">+91 1234567890</a></p>
                         <p>Address: New Delhi, India</p>
                     </address>

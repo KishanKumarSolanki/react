@@ -6,7 +6,7 @@ const About = () => {
     <>
    
                 {/* Header Section */}
-                <header className=" text-black text-center py-5 px-4">
+                <header className="about-header text-center py-5 px-4">
                     <h1 className="display-4 fw-bold">
                         About Happy Toys
                     </h1>
