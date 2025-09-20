@@ -14,6 +14,7 @@ const Card = ({items, cart, setCart }) => {
   }
 
   return (
+    <>
     <div className="container my-5">
       <div className="row">
         {items.map((item) => (
@@ -21,10 +22,10 @@ const Card = ({items, cart, setCart }) => {
             <div className="card" style={{ width: '18rem', margin: '10px' }}>
               <Link to={`/product/${item.id}`}
                 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <img src={item.image} className="card-img-top" alt={item.name} />
+                <img src={item.image} className="card-img-top" alt={item.title} />
               </Link>
               <div className="card-body">
-                <h5 className="card-title">{item.name}</h5>
+                <h5 className="card-title">{item.title}</h5>
                 {/* <p className="card-text">{item.description}</p> */}
                 <p className="card-text"><strong>Price: ₹{item.price}</strong></p>
                 <Link to={`/product/${item.id}`} className="btn btn-primary mx-3">
@@ -39,6 +40,7 @@ const Card = ({items, cart, setCart }) => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 
