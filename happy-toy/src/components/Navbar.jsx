@@ -4,10 +4,7 @@ import { FaShoppingCart, FaSearch, FaUser } from 'react-icons/fa';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 
-function Navbar() {
-    // In a real app, this would be a dynamic state, e.g., using useState or Context API
-    const cartItemCount = 0; 
-
+function Navbar({ cartItemCount }) {
     return (
         <nav className="navbar navbar-expand-lg navbar-custom">
             <div className="container-fluid">

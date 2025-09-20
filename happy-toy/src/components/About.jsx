@@ -2,9 +2,9 @@ import React from 'react'
 import './About.css';
 
 const About = () => {
-  return (
-    <>
-   
+    return (
+        <>
+            <div className="about-container">
                 {/* Header Section */}
                 <header className="about-header text-center py-5 px-4">
                     <h1 className="display-4 fw-bold">
@@ -118,9 +118,9 @@ const About = () => {
                         Thank you for choosing Happy Toys. We are honored to be a part of your family's playtime.
                     </p>
                 </footer>
-            
-    </>
-  )
+            </div>
+        </>
+    )
 }
 
 export default About

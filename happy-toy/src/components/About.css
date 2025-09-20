@@ -3,6 +3,10 @@
             background-color: #f7f9fc;
             color: black;
         }
+.about-header{
+    margin-bottom: 50px;
+}
+    
 .about-header {
             /* background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); */
             color: black;

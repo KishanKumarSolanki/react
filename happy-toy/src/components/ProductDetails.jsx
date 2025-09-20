@@ -21,7 +21,7 @@ const ProductDetails = () => {
        <img src={product.image} alt="" />
       </div>
       <div>
-        <h1 className="card-title">{product.name}</h1>
+        <h1 className="card-title">{product.title}</h1>
                 <p className="card-text">{product.description}</p>
                 <p className="card-text"><strong>Price: ₹{product.price}</strong></p>
                 {/* <a href="#" className="btn btn-primary mx-3">
