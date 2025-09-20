@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 function Navbar({ cartItemCount }) {
     return (
-        <nav className="navbar navbar-expand-lg navbar-custom">
+        <nav className="navbar navbar-expand-lg navbar-custom sticky-top">
             <div className="container-fluid">
                 {/* Brand Logo */}
                 <div className="d-flex align-items-center">

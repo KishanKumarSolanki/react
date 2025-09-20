@@ -2,16 +2,28 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import items from './data';
 import './ProductDetails.css'
+import Card1 from './Card1.jsx'
 
 
 const ProductDetails = () => {
   const { id } = useParams();
   const [product, setProduct] = useState({});
+  const [relatedproducts, setRelatedproducts] = useState([]);
 
+ 
   useEffect(() => {
-    const filterProduct = items.filter((product)=>product.id==id);
-    // console.log(filterProduct);
-    setProduct(filterProduct[0]);
+    // 1. Find the current product by ID
+    const currentProduct = items.find((p) => p.id == id);
+    setProduct(currentProduct);
+
+    // 2. If a product is found, filter for related products
+    if (currentProduct) {
+      const relatedproducts = items.filter(
+        // Filter for items with the same category, but a different ID
+        (p) => p.category === currentProduct.category && p.id !== currentProduct.id
+      );
+      setRelatedproducts(relatedproducts);
+    }
   }, [id]);
 
   return (
@@ -32,6 +44,8 @@ const ProductDetails = () => {
                 </a>
       </div>
     </div>
+    <h1 className='text-center'>Related Product</h1>
+    <Card1 items={relatedproducts} />
     </>
   )
 }

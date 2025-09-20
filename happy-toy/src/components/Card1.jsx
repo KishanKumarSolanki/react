@@ -1,8 +1,8 @@
 import React from 'react';
-import items from './data';
+
 import { Link } from 'react-router-dom';
 
-const Card = ({ cart, setCart }) => {
+const Card = ({items, cart, setCart }) => {
   const addtocart = (id, price, description, image) => {
     const obj = { id, price, description, image };
     setCart([...cart, obj]);
