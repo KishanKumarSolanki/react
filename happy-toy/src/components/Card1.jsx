@@ -1,8 +1,8 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
+import './Card1.css';
 
-const Card = ({items, cart, setCart }) => {
+const Card = ({ items, cart, setCart }) => {
   const addtocart = (id, price, description, image) => {
     const obj = { id, price, description, image };
     setCart([...cart, obj]);
@@ -14,33 +14,33 @@ const Card = ({items, cart, setCart }) => {
   }
 
   return (
-    <>
     <div className="container my-5">
-      <div className="row">
+      <div className="grid-container">
         {items.map((item) => (
-          <div className="col-lg-4 col-md-6" key={item.id}>
-            <div className="card" style={{ width: '18rem', margin: '10px' }}>
-              <Link to={`/product/${item.id}`}
-                style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <img src={item.image} className="card-img-top" alt={item.title} />
+          <div className="grid-card" key={item.id}>
+            <Link to={`/product/${item.id}`}>
+              <img src={item.image} alt={item.title} />
+            </Link>
+            <h5>{item.title}</h5>
+            <p><strong>₹{item.price}</strong></p>
+            <div className="actions">
+              <Link to={`/product/${item.id}`} className="btn btn-primary">
+                View Details
               </Link>
-              <div className="card-body">
-                <h5 className="card-title">{item.title}</h5>
-                {/* <p className="card-text">{item.description}</p> */}
-                <p className="card-text"><strong>Price: ₹{item.price}</strong></p>
-                <Link to={`/product/${item.id}`} className="btn btn-primary mx-3">
-                  {item.buttonText || 'View Details'}
-                </Link>
-                <button type="button" className="btn btn-warning">
-                  {item.buttonText || 'Add to Cart'}
-                </button>
-              </div>
+              <button
+                type="button"
+                className="btn btn-warning"
+                onClick={() =>
+                  addtocart(item.id, item.price, item.description, item.image)
+                }
+              >
+                Add to Cart
+              </button>
             </div>
           </div>
         ))}
       </div>
     </div>
-    </>
   );
 };
 
