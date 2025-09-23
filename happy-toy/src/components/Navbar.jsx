@@ -6,14 +6,20 @@ import { Link, useNavigate } from 'react-router-dom';
 
 function Navbar({ cartItemCount }) {
 
-  const [Search, setSearch] = useState("");
-  const navigate = useNavigate();
+    const [Search, setSearch] = useState("");
+    const [isNavOpen, setIsNavOpen] = useState(false);
+    const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    navigate(`/search/${Search}`);
-    setSearch("");
-  }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        navigate(`/search/${Search}`);
+        setSearch("");
+        setIsNavOpen(false);
+    }
+    const handleToggle = () => {
+        setIsNavOpen(!isNavOpen);
+    };
+
     return (
         <nav className="navbar navbar-expand-lg navbar-custom sticky-top">
             <div className="container-fluid">
@@ -36,17 +42,18 @@ function Navbar({ cartItemCount }) {
                 <button
                     className="navbar-toggler navbar-toggler-custom"
                     type="button"
+                    onClick={handleToggle}
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarContent"
                     aria-controls="navbarContent"
-                    aria-expanded="false"
+                    aria-expanded={isNavOpen ? 'true' : 'false'}
                     aria-label="Toggle navigation"
                 >
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
                 {/* Navbar Content */}
-                <div className="collapse navbar-collapse" id="navbarContent">
+                <div className={`collapse navbar-collapse${isNavOpen ? ' show' : ''}`} id="navbarContent">
                     {/* Navigation Links - Centered */}
                     <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li className="nav-item">
@@ -79,7 +86,7 @@ function Navbar({ cartItemCount }) {
                     <div className="d-flex align-items-center">
                         {/* Search Bar */}
                         <form className="d-flex me-3" role="search"
-                        onSubmit={handleSubmit}
+                            onSubmit={handleSubmit}
                         >
                             <div className="input-group search-container">
                                 <input
