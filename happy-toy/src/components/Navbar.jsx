@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import teddy from '../assets/teddy.png';
 import { FaShoppingCart, FaSearch, FaUser } from 'react-icons/fa';
 import './Navbar.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Navbar({ cartItemCount }) {
+
+  const [Search, setSearch] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate(`/search/${Search}`);
+    setSearch("");
+  }
     return (
         <nav className="navbar navbar-expand-lg navbar-custom sticky-top">
             <div className="container-fluid">
@@ -69,12 +78,13 @@ function Navbar({ cartItemCount }) {
                     {/* Search and User Actions */}
                     <div className="d-flex align-items-center">
                         {/* Search Bar */}
-                        <form className="d-flex me-3" role="search">
+                        <form className="d-flex me-3" role="search"
+                        onSubmit={handleSubmit}
+                        >
                             <div className="input-group search-container">
-                                <span className="input-group-text search-icon-custom">
-                                    <FaSearch />
-                                </span>
                                 <input
+                                    value={Search}
+                                    onChange={(e) => setSearch(e.target.value)}
                                     className="form-control search-input-custom"
                                     type="search"
                                     placeholder="Find toys..."

@@ -127,7 +127,7 @@ import mappuzzles from '../assets/mappuzzles.jpg';
   },
   {
     id: '13',
-    title: 'World Map Puzzle',
+    title: 'India Map Puzzle',
     description: 'A large, floor-sized puzzle that teaches geography and India cultures.',
     image: mappuzzles,
     details: 'This 100-piece puzzle features beautifully illustrated continents, oceans, and landmarks. Each piece is large and durable, making it easy for little hands to assemble. It includes fun facts about each country to make learning geography a global adventure.',
