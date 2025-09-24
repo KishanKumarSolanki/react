@@ -12,12 +12,13 @@ import Search from './components/Search.jsx';
 
 function App() {
   const [data, setData] = useState([...items]);
+  const [cart, setCart] = useState([])
   return (
     <>
     <Router>
     <Navbar  />
     <Routes>
-      <Route path="/" element={<Card1 items={data} />} />
+      <Route path="/" element={<Card1 cart={cart} setCart={setCart} items={data} />} />
       <Route path="/product/:id" element={<ProductDetails />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />

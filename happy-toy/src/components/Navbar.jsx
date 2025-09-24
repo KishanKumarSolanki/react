@@ -58,7 +58,7 @@ function Navbar({ cartItemCount }) {
                     <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li className="nav-item">
                             {/* FIX: Use <Link> for internal navigation */}
-                            <Link to="/" className="nav-link nav-link-custom" aria-current="page"  onClick={() => setIsNavOpen(false)}>
+                            <Link to="/" className="nav-link nav-link-custom" aria-current="page" onClick={() => setIsNavOpen(false)}>
                                 Home
                             </Link>
                         </li>
@@ -70,13 +70,13 @@ function Navbar({ cartItemCount }) {
                         </li> */}
                         <li className="nav-item">
                             {/* FIX: Use <Link> for internal navigation */}
-                            <Link to="/about" className="nav-link nav-link-custom"  onClick={() => setIsNavOpen(false)}>
+                            <Link to="/about" className="nav-link nav-link-custom" onClick={() => setIsNavOpen(false)}>
                                 About
                             </Link>
                         </li>
                         <li className="nav-item">
                             {/* FIX: Use <Link> for internal navigation */}
-                            <Link to="/contact" className="nav-link nav-link-custom"  onClick={() => setIsNavOpen(false)}>
+                            <Link to="/contact" className="nav-link nav-link-custom" onClick={() => setIsNavOpen(false)}>
                                 Contact
                             </Link>
                         </li>
