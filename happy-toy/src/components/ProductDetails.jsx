@@ -12,6 +12,7 @@ const ProductDetails = () => {
 
  
   useEffect(() => {
+     window.scrollTo(0, 0);
     // 1. Find the current product by ID
     const currentProduct = items.find((p) => p.id == id);
     setProduct(currentProduct);
