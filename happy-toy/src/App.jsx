@@ -9,6 +9,7 @@ import Footer from './components/Footer.jsx';
 import Contact from './components/Contact.jsx';
 import items from './components/data.js';
 import Search from './components/Search.jsx';
+import Cart from './components/Cart.jsx';
 
 function App() {
   const [data, setData] = useState([...items]);
@@ -16,13 +17,14 @@ function App() {
   return (
     <>
     <Router>
-    <Navbar  />
+    <Navbar cart={cart}  />
     <Routes>
       <Route path="/" element={<Card1 cart={cart} setCart={setCart} items={data} />} />
-      <Route path="/product/:id" element={<ProductDetails />} />
+      <Route path="/product/:id" element={<ProductDetails  cart={cart} />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/search/:term" element={<Search />} />
+      <Route path="/cart" element={<Cart cart={cart} setCart={setCart}/>} />
     </Routes> 
     </Router>
     <Footer />

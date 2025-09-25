@@ -9,7 +9,7 @@ const Card = ({ items, cart, setCart }) => {
     const obj = { id, title, price, description, image };
     setCart([...cart, obj]);
     console.log("Cart element =", cart);
-    toast.success('Success fuly add to car', {
+    toast.success('Successfuly add to cart', {
       position: "top-center",
       autoClose: 1500,
       hideProgressBar: false,

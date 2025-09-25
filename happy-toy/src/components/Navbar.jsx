@@ -4,7 +4,7 @@ import { FaShoppingCart, FaSearch, FaUser } from 'react-icons/fa';
 import './Navbar.css';
 import { Link, useNavigate } from 'react-router-dom';
 
-function Navbar({ cartItemCount }) {
+function Navbar({ cart }) {
 
     const [Search, setSearch] = useState("");
     const [isNavOpen, setIsNavOpen] = useState(false);
@@ -30,12 +30,6 @@ function Navbar({ cartItemCount }) {
                         <span className="navbar-brand-custom">Happy Toys</span>
                     </Link>
 
-                    {/* Mobile Cart Count - Added check for count > 0 for display logic */}
-                    {cartItemCount > 0 && (
-                        <span className="cart-count-mobile d-lg-none ms-2">
-                            ({cartItemCount})
-                        </span>
-                    )}
                 </div>
 
                 {/* Mobile Toggler - No changes needed here */}
@@ -106,14 +100,15 @@ function Navbar({ cartItemCount }) {
                                 <FaUser size={18} />
                             </Link>
                             {/* FIX: Use <Link> instead of <button> if this leads to the cart page */}
-                            <Link to="/cart" className="btn icon-button-custom position-relative" aria-label={`Shopping Cart with ${cartItemCount} items`}>
+                            <Link to="/cart" className="" >
+                                <button type="button" className="btn icon-button-custom position-relative">
+                                 
                                 <FaShoppingCart size={20} />
-                                {cartItemCount > 0 && (
-                                    // FIX: Removed the unnecessary and problematic Link. The count is displayed correctly.
-                                    <span className="cart-badge-custom badge rounded-pill">
-                                        {cartItemCount}
+                                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                        {cart.length}
+                                        <span className="visually-hidden">unread messages</span>
                                     </span>
-                                )}
+                                </button>
                             </Link>
                         </div>
                     </div>

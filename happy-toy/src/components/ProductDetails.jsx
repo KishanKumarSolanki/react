@@ -5,7 +5,7 @@ import './ProductDetails.css'
 import Card1 from './Card1.jsx'
 
 
-const ProductDetails = () => {
+const ProductDetails = (cart) => {
   const { id } = useParams();
   const [product, setProduct] = useState({});
   const [relatedproducts, setRelatedproducts] = useState([]);
@@ -40,9 +40,9 @@ const ProductDetails = () => {
                 {/* <a href="#" className="btn btn-primary mx-3">
                   {product.buttonText || 'View Details'}
                 </a> */}
-                <a href="#" className="btn btn-warning">
-                  {product.buttonText || 'Add to Cart'}
-                </a>
+                <button className="btn btn-warning" onClick={addToCart}>
+            {product.buttonText || 'Add to Cart'}
+          </button>
       </div>
     </div>
     <h1 className='text-center'>Related Product</h1>
