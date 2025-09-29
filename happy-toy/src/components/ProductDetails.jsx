@@ -3,13 +3,30 @@ import { useParams } from 'react-router-dom';
 import items from './data';
 import './ProductDetails.css'
 import Card1 from './Card1.jsx'
+import { ToastContainer, toast, Bounce  } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
-const ProductDetails = (cart) => {
+const ProductDetails = ( {cart, setCart}) => {
   const { id } = useParams();
   const [product, setProduct] = useState({});
   const [relatedproducts, setRelatedproducts] = useState([]);
-
+  const addtocart = (id, title, price, description, image) => {
+    const obj = { id, title, price, description, image };
+    setCart([...cart, obj]);
+    console.log("Cart element =", cart);
+    toast.success('Successfuly add to cart', {
+      position: "top-center",
+      autoClose: 1500,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Bounce,
+    });
+  }
  
   useEffect(() => {
      window.scrollTo(0, 0);
@@ -40,9 +57,15 @@ const ProductDetails = (cart) => {
                 {/* <a href="#" className="btn btn-primary mx-3">
                   {product.buttonText || 'View Details'}
                 </a> */}
-                <button className="btn btn-warning" onClick={addToCart}>
-            {product.buttonText || 'Add to Cart'}
-          </button>
+               <button
+                  type="button"
+                  className="btn btn-warning"
+                  onClick={() =>
+                    addtocart(product.id, product.title, product.price, product.description, product.image)
+                  }
+                >
+                  Add to Cart
+                </button>
       </div>
     </div>
     <h1 className='text-center'>Related Product</h1>
@@ -51,4 +74,4 @@ const ProductDetails = (cart) => {
   )
 }
 
-export default ProductDetails
+export default ProductDetails;
