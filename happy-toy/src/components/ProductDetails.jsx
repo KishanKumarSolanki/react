@@ -69,7 +69,7 @@ const ProductDetails = ( {cart, setCart}) => {
       </div>
     </div>
     <h1 className='text-center'>Related Product</h1>
-    <Card1 items={relatedproducts} />
+    <Card1 items={relatedproducts} cart={cart} setCart={setCart} />
     </>
   )
 }
