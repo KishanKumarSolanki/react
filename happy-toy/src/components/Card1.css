@@ -1,6 +1,6 @@
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* default: phone - 2 cards */
+  grid-template-columns: repeat(1, 1fr); /* default: phone - 1 cards */
   gap: 20px;
 }
 

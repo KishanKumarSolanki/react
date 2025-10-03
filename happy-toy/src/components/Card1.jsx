@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Card1.css';
-import { ToastContainer, toast, Bounce  } from 'react-toastify';
+import { ToastContainer, toast, Bounce} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Card = ({ items, cart, setCart }) => {
@@ -39,7 +39,7 @@ const Card = ({ items, cart, setCart }) => {
         draggable
         pauseOnHover
         theme="dark"
-       transition={Bounce}
+        transition={Bounce}
       />
       <div className="container my-5">
         <div className="grid-container">
