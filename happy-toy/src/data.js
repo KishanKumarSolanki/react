@@ -12,6 +12,11 @@ import dinosaur from './assets/dinosaur.jpg';
 import penguin from './assets/penguin.jpg';
 import magnetictiles from './assets/magnetictiles.jpg';
 import mappuzzles from './assets/mappuzzles.jpg';
+import rcCar from './assets/rcCar.jpg';
+import rcHelicopter from './assets/rcHelicopter.jpg';
+import rcBoat from './assets/rcBoat.jpg';
+import rcjcb from './assets/rcjcb.jpg';
+import rcMonsterTruck from './assets/rcmonstertruck.jpg';
 
  const items = [];
 export const softToys = [
@@ -52,7 +57,7 @@ export const softToys = [
     category: 'soft-toys'
   },
   {
-    id: '9',
+    id: '5',
     title: 'Fluffy Bunny',
     description: 'A cute and cuddly bunny with long, floppy ears and a soft, cotton tail.',
     image: bunny,
@@ -61,7 +66,7 @@ export const softToys = [
     category: 'soft-toys'
   },
   {
-    id: '10',
+    id: '6',
     title: 'Giant Plush Dinosaur',
     description: 'A massive and friendly dinosaur, perfect for big hugs and epic adventures.',
     image: dinosaur,
@@ -70,7 +75,7 @@ export const softToys = [
     category: 'soft-toys'
   },
   {
-    id: '11',
+    id: '7',
     title: 'Little Penguin',
     description: 'A small, charming penguin with a weighted bottom so it can sit upright.',
     image: penguin,
@@ -83,7 +88,7 @@ export const softToys = [
 export const educationalToys = [ 
   
   {
-    id: '5',
+    id: '1',
     title: 'STEM Kits',
     description: 'Focus on Science, Technology, Engineering, and Mathematics.',
     image: stem,
@@ -92,7 +97,7 @@ export const educationalToys = [
     category: 'educational-toys'
   },
   {
-    id: '6',
+    id: '2',
     title: 'Puzzles',
     description: 'Develop problem-solving, logic, and hand-eye coordination.',
     image: puzzles,
@@ -101,7 +106,7 @@ export const educationalToys = [
     category: 'educational-toys'
   },
   {
-    id: '7',
+    id: '3',
     title: 'Building Blocks',
     description: 'Encourage creativity, problem-solving, and fine motor skills.',
     image: math,
@@ -110,7 +115,7 @@ export const educationalToys = [
     category: 'educational-toys'
   },
   {
-    id: '8',
+    id: '4',
     title: 'Counting Toys',
     description: 'Help with number recognition, basic arithmetic, and logical thinking.',
     image: counting,
@@ -119,7 +124,7 @@ export const educationalToys = [
     category: 'educational-toys'
   },
   {
-    id: '12',
+    id: '5',
     title: 'Magnetic Building Tiles',
     description: 'Colorful magnetic tiles for creative and open-ended construction play.',
     image: magnetictiles,
@@ -128,7 +133,7 @@ export const educationalToys = [
     category: 'educational-toys'
   },
   {
-    id: '13',
+    id: '6',
     title: 'India Map Puzzle',
     description: 'A large, floor-sized puzzle that teaches geography and India cultures.',
     image: mappuzzles,
@@ -136,6 +141,54 @@ export const educationalToys = [
     price: 280.00,
     category: 'educational-toys'
   },
+];
+
+export const rcToys = [
+  {
+    id: '1',
+    title: 'Remote Control Car',
+    description: 'A fast and fun remote control car for kids.',
+    image: rcCar,
+    details: 'This remote control car features a sleek design and can reach speeds of up to 15 mph. It comes with a rechargeable battery and a user-friendly remote control.',
+    price: 199.00,
+    category: 'rc-toys'
+  },
+  {
+    id: '2',
+    title: 'RC Helicopter',
+    description: 'A stable and easy-to-fly remote control helicopter.',
+    image: rcHelicopter,
+    details: 'This RC helicopter is perfect for beginners. It features a durable design and can be flown indoors or outdoors.',
+    price: 249.00,
+    category: 'rc-toys'
+  },
+  {
+    id: '3',
+    title: 'RC Boat',
+    description: 'A high-speed remote control boat for water adventures.',
+    image: rcBoat,
+    details: 'This RC boat can reach speeds of up to 20 mph on water. It features a waterproof design and comes with a 2.4GHz remote control.',
+    price: 299.00,
+    category: 'rc-toys'
+  },
+  {
+    id: '4',
+    title: 'RC JCB',
+    description: 'A powerful remote control JCB for construction fun.',
+    image: rcjcb,
+    details: 'This RC JCB features realistic movements and sounds. It can be controlled via a user-friendly remote and is perfect for indoor and outdoor play.',
+    price: 399.00,
+    category: 'rc-toys'
+  },
+  {
+    id: '5',
+    title: 'RC Monster Truck',
+    description: 'A rugged remote control monster truck for off-road adventures.',
+    image: rcMonsterTruck,
+    details: 'This RC monster truck is built for tough terrain and can tackle any obstacle in its path. With large wheels and a powerful motor, it provides an exhilarating off-road experience.',
+    price: 499.00,
+    category: 'rc-toys'
+  }
 ];
 
 

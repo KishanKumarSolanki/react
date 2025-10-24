@@ -20,7 +20,6 @@ function App() {
     <>
     <Router>
     <Navbar cart={cart}  />
-    
     <Routes>
       <Route path="/" element={<HomePage />} />
       {/* <Route path="/" element={<Card1 cart={cart} setCart={setCart} items={data} />} /> */}
