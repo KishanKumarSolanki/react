@@ -1,21 +1,20 @@
-// data.js
 // This file stores all of the product information in a structured array.
-import teddy from '../assets/teddy.png';
-import unicorn2 from '../assets/unicorn2.jpg';
-import lama from '../assets/lama.jpg';
-import miccy from '../assets/miccy.png';
-import stem from '../assets/stem.jpg';
-import puzzles from '../assets/puzzles.jpg';
-import math from '../assets/math.jpg';
-import counting from '../assets/counting.jpg';
-import bunny from '../assets/bunny.jpg';
-import dinosaur from '../assets/dinosaur.jpg';
-import penguin from '../assets/penguin.jpg';
-import magnetictiles from '../assets/magnetictiles.jpg';
-import mappuzzles from '../assets/mappuzzles.jpg';
+import teddy from './assets/teddy.png';
+import unicorn2 from './assets/unicorn2.jpg';
+import lama from './assets/lama.jpg';
+import miccy from './assets/miccy.png';
+import stem from './assets/stem.jpg';
+import puzzles from './assets/puzzles.jpg';
+import math from './assets/math.jpg';
+import counting from './assets/counting.jpg';
+import bunny from './assets/bunny.jpg';
+import dinosaur from './assets/dinosaur.jpg';
+import penguin from './assets/penguin.jpg';
+import magnetictiles from './assets/magnetictiles.jpg';
+import mappuzzles from './assets/mappuzzles.jpg';
 
- const items = [
-  // Soft Toys
+ const items = [];
+export const softToys = [
   {
     id: '1',
     title: 'Teddy Bear',
@@ -79,7 +78,10 @@ import mappuzzles from '../assets/mappuzzles.jpg';
     price: 249.00,
     category: 'soft-toys'
   },
-  // Educational Toys
+
+];
+export const educationalToys = [ 
+  
   {
     id: '5',
     title: 'STEM Kits',
@@ -135,5 +137,6 @@ import mappuzzles from '../assets/mappuzzles.jpg';
     category: 'educational-toys'
   },
 ];
+
 
 export default items;

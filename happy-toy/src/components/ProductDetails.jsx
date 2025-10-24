@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import items from './data';
+import items from '../data.js';
 import './ProductDetails.css'
-import Card1 from './Card1.jsx'
+import Card1 from './Card.jsx'
 import { ToastContainer, toast, Bounce  } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 

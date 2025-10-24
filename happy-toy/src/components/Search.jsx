@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import items from './data';
-import Card1 from './Card1.jsx';
+import items from '../data.js';
+import Card1 from './Card.jsx';
 
 const Search = () => {
     const {term} = useParams();

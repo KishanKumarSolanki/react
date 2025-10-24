@@ -1,0 +1,102 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* default: phone - 1 cards */
+  gap: 20px;
+}
+
+@media (min-width: 992px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr); /* laptop & bigger - 4 cards */
+  }
+}
+
+.grid-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+  background: #fff;
+}
+
+
+
+.grid-card img {
+  max-width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+/* Card1.css (उदाहरण के लिए) */
+
+.product-card-content {
+    /* कार्ड को आकर्षक बनाने के लिए */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 15px;
+    background-color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.product-card-content:hover {
+    /* हॉवर करने पर ऊपर उठे */
+    transform: translateY(-5px); 
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
+}
+
+.product-card-content img {
+    /* इमेज को एक जैसा साइज़ दें */
+    height: 200px; /* या कोई भी निश्चित साइज़ */
+    object-fit: contain; /* इमेज को बिना क्रॉप किए फिट करें */
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Slick Arrows को स्टाइल करें */
+.slick-prev:before,
+.slick-next:before {
+    color: #ffc107; /* Warning color या कोई भी आकर्षक रंग */
+    font-size: 30px;
+}
+
+/* src/components/Card1.css */
+
+/* Slick Arrows को स्टाइल करें */
+.slick-prev:before,
+.slick-next:before {
+    color: #007bff; /* Bootstrap primary blue, या कोई भी आकर्षक रंग */
+    font-size: 35px; /* एरो का साइज़ बढ़ाएँ */
+    line-height: 1; /* वर्टिकल अलाइनमेंट के लिए */
+    opacity: 0.8; /* थोड़ा ट्रांसपेरेंट */
+    transition: color 0.3s ease, opacity 0.3s ease; /* हॉवर इफ़ेक्ट के लिए */
+}
+
+/* हॉवर करने पर एरो का रंग बदलें */
+.slick-prev:hover:before,
+.slick-next:hover:before {
+    color: #ffc107; /* Bootstrap warning yellow, या कोई और आकर्षक रंग */
+    opacity: 1; /* पूरी तरह से ओपेक */
+}
+
+/* एरो की पोजीशन (अगर डिफ़ॉल्ट सही न लगे) */
+
+.slick-prev {
+    left: -40px; 
+    z-index: 10;
+}
+.slick-next {
+    right: -40px;
+    z-index: 10;
+}
+
+
