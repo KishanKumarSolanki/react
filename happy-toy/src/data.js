@@ -12,7 +12,7 @@ import dinosaur from './assets/dinosaur.jpg';
 import penguin from './assets/penguin.jpg';
 import magnetictiles from './assets/magnetictiles.jpg';
 import mappuzzles from './assets/mappuzzles.jpg';
-import rcCar from './assets/rcCar.jpg';
+import rccar from './assets/rccar.jpg';
 import rcHelicopter from './assets/rcHelicopter.jpg';
 import rcBoat from './assets/rcBoat.jpg';
 import rcjcb from './assets/rcjcb.jpg';
@@ -148,7 +148,7 @@ export const rcToys = [
     id: '1',
     title: 'Remote Control Car',
     description: 'A fast and fun remote control car for kids.',
-    image: rcCar,
+    image: rccar,
     details: 'This remote control car features a sleek design and can reach speeds of up to 15 mph. It comes with a rechargeable battery and a user-friendly remote control.',
     price: 199.00,
     category: 'rc-toys'
