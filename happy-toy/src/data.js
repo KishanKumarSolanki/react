@@ -13,7 +13,7 @@ import penguin from './assets/penguin.jpg';
 import magnetictiles from './assets/magnetictiles.jpg';
 import mappuzzles from './assets/mappuzzles.jpg';
 import rccar from './assets/rccar.jpg';
-import rcHelicopter from './assets/rcHelicopter.jpg';
+import rcHelicopter from './assets/rchelicopter.jpg';
 import rcBoat from './assets/rcboat.jpg';
 import rcjcb from './assets/rcjcb.jpg';
 import rcMonsterTruck from './assets/rcmonstertruck.jpg';
