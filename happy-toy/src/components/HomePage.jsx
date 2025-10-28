@@ -11,12 +11,11 @@ const HomePage = ({ cart, setCart }) => {
     <div className="main-content">
       <ToastContainer />
       <Slider />
-      <h1>Welcome to Happy Toy Store</h1>
 
 
       <Card
         title="🧸 Soft Toys Section"
-        items={softToys} // softToys array का उपयोग करें
+        items={softToys}
         cart={cart}
         setCart={setCart}
       />

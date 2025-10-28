@@ -1,4 +1,3 @@
-// This file stores all of the product information in a structured array.
 import teddy from './assets/teddy.png';
 import unicorn2 from './assets/unicorn2.jpg';
 import lama from './assets/lama.jpg';

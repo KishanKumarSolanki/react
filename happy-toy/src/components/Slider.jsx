@@ -1,57 +1,49 @@
 import React from 'react';
-import Carousel from 'react-bootstrap/Carousel'; 
+import Carousel from 'react-bootstrap/Carousel';
 import banner from '../assets/banner.png';
-// import banner1 from '../assets/banner1.png';
-import banner2 from '../assets/banner2.jpg';
-import banner3 from '../assets/banner3.jpg';
+import banner1 from '../assets/banner1.png';
+import banner2 from '../assets/banner2.png';
+
 
 function Slider() {
   return (
-    <div style={{ maxWidth: '1270px', maxHeight: '300', margin: 'auto', marginTop: '0px' }}>
-      {/* react-bootstrap Carousel component */}
+    <div style={{ width: '100%', maxWidth: '1400vw', maxHeight: '300', margin: 'auto', marginTop: '0px' , overflow: 'hidden' }}>
       <Carousel
-        interval={2000} // Set interval for automatic sliding (e.g., 2000ms = 2 seconds)
-        pause="hover"   // Pause on mouse hover
-      // You can add more props like controls={false} for no prev/next buttons
-      // or indicators={false} for no bottom dots
+        interval={2000}
+        pause="hover"
       >
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={banner} // Ensure this path is correct relative to your public folder
+            src={banner}
             alt="First slide"
-            style={{ maxHeight: '300px', objectFit: 'contain' }} // Add some styling
+            style={{ maxHeight: '300px',  objectFit: 'contain' }}
           />
-          {/* Optional: Add a caption */}
+
           <Carousel.Caption>
-            {/* <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
           </Carousel.Caption>
         </Carousel.Item>
 
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={banner3} // Ensure this path is correct relative to your public folder
+            src={banner1}
             alt="Second slide"
             style={{ maxHeight: '300px', objectFit: 'contain' }}
           />
           <Carousel.Caption>
-            {/* <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
           </Carousel.Caption>
         </Carousel.Item>
 
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={banner2} // Ensure this path is correct relative to your public folder
+            src={banner2}
             alt="Third slide"
             style={{ maxHeight: '300px', objectFit: 'contain' }}
           />
           <Carousel.Caption>
-            {/* <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
+
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
