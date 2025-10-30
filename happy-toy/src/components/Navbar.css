@@ -1,9 +1,19 @@
-/* Navbar.css */
+/* Navbar.css - FIXED VERSION */
 .navbar-custom {
-    background-color: #a0d2eb;
-    background: linear-gradient(135deg, #a0d2eb 0%, #e5eaf5 100%);
+    background: linear-gradient(135deg, #a0d2eb 0%, #e5eaf5 100%) !important;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    width: 100%;
+}
+
+/* Spacer for fixed navbar */
+.navbar-spacer {
+    height: 70px; /* Adjust according to your navbar height */
 }
 
 .navbar-brand-custom {
@@ -41,12 +51,9 @@
 }
 
 /* SEARCH & ICONS STYLING */
-/* * Desktop-first approach for search and icons.
- * Set a min-width for larger screens.
- */
 .search-container {
     min-width: 250px;
-    margin-right: 1rem; /* Added margin for spacing on desktop */
+    margin-right: 1rem;
 }
 
 .search-input-custom {
@@ -78,12 +85,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 
 .navbar-toggler-custom {
     border: none;
     padding: 0.5rem;
+    background: rgba(255,255,255,0.3) !important;
+}
+
+.navbar-toggler-custom:hover {
+    background: rgba(255,255,255,0.5) !important;
 }
 
 .icon-button-custom {
@@ -96,10 +107,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: rgba(255,255,255,0.3);
 }
 
 .icon-button-custom:hover {
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.7);
     transform: scale(1.05);
 }
 
@@ -116,54 +128,110 @@
     font-weight: bold;
 }
 
-/* ========================================= */
-/* Media Queries for Responsiveness */
-/* ========================================= */
+/* Custom navbar collapse */
+.navbar-collapse-custom {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #a0d2eb 0%, #e5eaf5 100%);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    z-index: 1020;
+}
 
+.navbar-collapse-custom.show {
+    display: block;
+}
+
+/* Mobile view adjustments */
 @media (max-width: 991.98px) {
-    /* Use 991.98px for better Bootstrap alignment */
+    .navbar-nav {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .nav-item {
+        margin: 10px 0;
+    }
+    
+    .mobile-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .search-container {
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    .search-input-custom {
+        width: 100% !important;
+    }
 
     /* Navigation links on small screens */
     .navbar-nav {
         margin: 1rem 0 !important;
-        text-align: center; /* Center the text for better mobile aesthetics */
+        text-align: center;
         width: 100%;
     }
     
     .nav-link-custom {
         margin: 0.25rem 0;
         padding: 0.75rem;
-        display: block; /* Make links take full width of the container */
+        display: block;
+        background: rgba(255,255,255,0.2);
+    }
+
+    .nav-link-custom:hover {
+        background: rgba(255,255,255,0.4);
     }
 
     /* Adjust search and icon container for mobile */
     .navbar-collapse .d-flex.align-items-center {
-        flex-direction: column; /* Stack search bar and icons vertically */
-        align-items: stretch !important; /* Stretch to full width */
+        flex-direction: column;
+        align-items: stretch !important;
         width: 100%;
-    }
-
-    /* Search bar on mobile */
-    .search-container {
-        min-width: unset; /* Remove min-width restriction */
-        width: 100%; /* Make search bar full width */
-        margin-right: 0; /* Remove right margin on mobile */
-        margin-bottom: 1rem;
     }
 
     /* Icon buttons on mobile */
     .icon-button-custom {
-        /* Optional: adjust padding or size for touch targets */
-        padding: 0.75rem; 
+        padding: 0.75rem;
         width: 100%;
         border-radius: 0.5rem;
-        justify-content: center; /* Center the icon */
+        justify-content: center;
+        background: rgba(255,255,255,0.3);
     }
 
     /* Align cart and user icons in a row on mobile */
     .navbar-collapse .d-flex {
         width: 100%;
-        justify-content: space-around; /* Distribute icons evenly */
+        justify-content: space-around;
         margin-top: 1rem;
     }
+}
+
+/* Desktop view */
+@media (min-width: 992px) {
+    .navbar-collapse-custom {
+        position: static;
+        display: flex !important;
+        background: transparent !important;
+        box-shadow: none;
+        padding: 0;
+    }
+    
+    .navbar-spacer {
+        height: 70px;
+    }
+}
+
+/* Ensure gradient shows properly */
+.navbar-custom .navbar-collapse {
+    background: transparent !important;
+}
+
+.navbar-custom .container-fluid {
+    background: transparent !important;
 }
