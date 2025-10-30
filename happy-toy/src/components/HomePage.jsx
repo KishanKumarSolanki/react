@@ -7,6 +7,12 @@ import Slider from './Slider.jsx';
 
 // App.jsx से cart और setCart props के रूप में लें
 const HomePage = ({ cart, setCart }) => {
+
+  const limitedSoftToys = softToys.slice(0, 4);
+  const limitedEducationalToys = educationalToys.slice(0, 4);
+  const limitedRcToys = rcToys.slice(0, 4);
+
+
   return (
     <div className="main-content">
       <ToastContainer />
@@ -15,7 +21,7 @@ const HomePage = ({ cart, setCart }) => {
 
       <Card
         title="🧸 Soft Toys Section"
-        items={softToys}
+        items={limitedSoftToys}
         cart={cart}
         setCart={setCart}
       />
@@ -25,7 +31,7 @@ const HomePage = ({ cart, setCart }) => {
 
       <Card
         title="🧠 Educational Toys Section"
-        items={educationalToys}
+        items={limitedEducationalToys}
         cart={cart}
         setCart={setCart}
       />
@@ -35,7 +41,7 @@ const HomePage = ({ cart, setCart }) => {
 
       <Card
         title="🚗 Remote Control Toys Section"
-        items={rcToys}
+        items={limitedRcToys}
         cart={cart}
         setCart={setCart}
       />
