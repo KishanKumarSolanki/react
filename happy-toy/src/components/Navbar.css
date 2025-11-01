@@ -13,7 +13,7 @@
 
 /* Spacer for fixed navbar */
 .navbar-spacer {
-    height: 70px; /* Adjust according to your navbar height */
+    height: 60px; /* Adjust according to your navbar height */
 }
 
 .navbar-brand-custom {
@@ -223,7 +223,7 @@
     }
     
     .navbar-spacer {
-        height: 70px;
+        height: 60px;
     }
 }
 

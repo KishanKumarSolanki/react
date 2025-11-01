@@ -33,7 +33,7 @@ const Footer = () => {
 
           {/* Quick Links Section */}
           <div className="footer-section">
-            <h4 className="section-title">Quick Links</h4>
+            <h4 className="section-title" style={{ borderBottom: 'none' }}>Quick Links</h4>
             <ul className="footer-links">
               <li><a href="/">Home</a></li>
               <li><a href="/about">About Us</a></li>
@@ -45,7 +45,7 @@ const Footer = () => {
 
           {/* Customer Service Section */}
           <div className="footer-section">
-            <h4 className="section-title">Customer Service</h4>
+            <h4 className="section-title" style={{ borderBottom: 'none' }}>Customer Service</h4>
             <ul className="footer-links">
               <li><a href="/shipping">Shipping Info</a></li>
               <li><a href="/returns">Returns & Exchanges</a></li>
@@ -57,7 +57,7 @@ const Footer = () => {
 
           {/* Contact Info Section */}
           <div className="footer-section">
-            <h4 className="section-title">Contact Us</h4>
+            <h4 className="section-title" style={{ borderBottom: 'none' }}>Contact Us</h4>
             <div className="contact-info">
               <div className="contact-item">
                 <FaMapMarkerAlt className="contact-icon" />

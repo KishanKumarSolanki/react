@@ -24,7 +24,7 @@ const Card = ({ title, items, cart, setCart, limit = 4 }) => {
 
   return (
     <div className="card-section-wrapper">
-      <h2 className="section-title ">{title}</h2>
+      <h2 className="section-title" style={{ borderBottom: 'none' }}>{title}</h2>
       <div className="cards-grid-container">
         {limitedItems.map((item) => (
           <div className="card custom-card" key={item.id}>
