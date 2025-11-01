@@ -13,7 +13,7 @@ import Cart from './components/Cart.jsx';
 import Profile from './components/Profile.jsx';
 import HomePage from './components/HomePage.jsx';
 import Shop from './components/Shop.jsx';
-import ScrollToTop from './components/Scrolltotop.jsx';
+import ScrollToTop from './components/Scroll.jsx';
 
 function App() {
   const [data, setData] = useState([...items]);
