@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import items from '../data.js';
-import Card1 from './Card.jsx';
+import Card from './Card.jsx';
 
 const Search = () => {
     const {term} = useParams();
@@ -15,7 +15,7 @@ const Search = () => {
         filtered();
     }, [term])
   return (
-    <Card1 items={filter} />
+    <Card items={filter} />
   )
 }
 

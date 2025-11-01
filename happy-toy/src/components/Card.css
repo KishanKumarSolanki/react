@@ -50,7 +50,7 @@
 /* Image Section */
 .card-image-container {
   padding: 20px;
-  background: #f8f9fa;
+  background: #ffffff;
   border-bottom: 1px solid #e9ecef;
   flex-shrink: 0;
 }
