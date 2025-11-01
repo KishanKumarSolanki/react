@@ -13,27 +13,29 @@ import Cart from './components/Cart.jsx';
 import Profile from './components/Profile.jsx';
 import HomePage from './components/HomePage.jsx';
 import Shop from './components/Shop.jsx';
+import ScrollToTop from './components/Scrolltotop.jsx';
 
 function App() {
   const [data, setData] = useState([...items]);
   const [cart, setCart] = useState([])
   return (
     <>
-    <Router>
-    <Navbar cart={cart}  />
-    <Routes>
-      <Route path="/" element={<HomePage cart={cart} setCart={setCart}/>} />
-      {/* <Route path="/" element={<Card1 cart={cart} setCart={setCart} items={data} />} /> */}
-      <Route path="/product/:id" element={<ProductDetails  cart={cart} setCart={setCart} />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/search/:term" element={<Search />} />
-      <Route path="/cart" element={<Cart cart={cart} setCart={setCart}/>} />
-      <Route path="/profile" element={<Profile />} />
-      <Route path="/shop" element={<Shop cart={cart} setCart={setCart} />} />
-    </Routes> 
-    </Router>
-    <Footer />
+      <Router>
+        <ScrollToTop />
+        <Navbar cart={cart} />
+        <Routes>
+          <Route path="/" element={<HomePage cart={cart} setCart={setCart} />} />
+          {/* <Route path="/" element={<Card1 cart={cart} setCart={setCart} items={data} />} /> */}
+          <Route path="/product/:id" element={<ProductDetails cart={cart} setCart={setCart} />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/search/:term" element={<Search />} />
+          <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/shop" element={<Shop cart={cart} setCart={setCart} />} />
+        </Routes>
+      </Router>
+      <Footer />
     </>
   );
 }
