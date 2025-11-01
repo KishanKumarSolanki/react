@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import './Card.css'; 
 import { toast, Bounce } from 'react-toastify';
 
-const Card = ({ title, items, cart, setCart, limit = 4 }) => {
+const Card = ({ title, items, cart, setCart, limit = 0 }) => {
 
   const addToCart = (id, title, price, description, image) => {
     const obj = { id, title, price, description, image };
     setCart([...cart, obj]);
     toast.success('Added to cart!', {
-      position: "top-center",
+      position: "top-right",
       autoClose: 1500,
       theme: "dark",
       transition: Bounce,
@@ -20,13 +20,15 @@ const Card = ({ title, items, cart, setCart, limit = 4 }) => {
     return null;
   }
 
-  const limitedItems = items.slice(0, limit);
+  const itemsToDisplay = (limit !== null && limit > 0) 
+    ? items.slice(0, limit) 
+    : items;
 
   return (
     <div className="card-section-wrapper">
-      <h2 className="section-title" style={{ borderBottom: 'none' }}>{title}</h2>
+      <h2 className="section-title" >{title}</h2>
       <div className="cards-grid-container">
-        {limitedItems.map((item) => (
+        {itemsToDisplay.map((item) => (
           <div className="card custom-card" key={item.id}>
             <div className="card-image-container">
               <img src={item.image} className="card-img-top" alt={item.title} />

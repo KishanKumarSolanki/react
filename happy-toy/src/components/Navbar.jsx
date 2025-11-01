@@ -48,7 +48,6 @@ function Navbar({ cart }) {
 
                     {/* Navbar Content */}
                     <div className={`navbar-collapse-custom ${isNavOpen ? 'show' : ''}`}>
-                        {/* Navigation Links - Centered */}
                         <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                             <li className="nav-item">
                                 <Link to="/" className="nav-link nav-link-custom" onClick={closeNavbar}>
@@ -61,10 +60,16 @@ function Navbar({ cart }) {
                                 </Link>
                             </li>
                             <li className="nav-item">
+                                <Link to="/shop" className="nav-link nav-link-custom" onClick={closeNavbar}>
+                                    Shop
+                                </Link>
+                            </li>
+                            <li className="nav-item">
                                 <Link to="/contact" className="nav-link nav-link-custom" onClick={closeNavbar}>
                                     Contact
                                 </Link>
                             </li>
+
                         </ul>
 
                         {/* Search and User Actions */}

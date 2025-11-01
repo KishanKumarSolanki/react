@@ -3,25 +3,20 @@ import { Link } from 'react-router-dom';
 
 const Cart = ({ cart, setCart }) => {
 
-    // Helper function to ensure price is a number
+   
     const getNumericPrice = (product) => {
-        // Tries to parse the price, defaults to 0 if invalid
         return parseFloat(product.price) || 0;
     };
-
-    // Helper function to ensure quantity is a number, default to 1 if not present
+ 
     const getNumericQuantity = (product) => {
-        // Tries to parse the quantity, defaults to 1 if invalid
         return parseInt(product.quantity, 10) || 1;
     };
 
-    // 1. Remove Item Function: Filters the cart array, keeping only products whose ID does not match the removed product's ID.
     const handleRemove = (id) => {
         const newCart = cart.filter(product => product.id !== id);
         setCart(newCart);
     };
 
-    // 2. Increase/Decrease Quantity Function: Maps through the cart and updates the quantity for the matching product.
     const handleChange = (product, d) => {
         const updatedCart = cart.map(item => {
             if (item.id === product.id) {
@@ -35,7 +30,6 @@ const Cart = ({ cart, setCart }) => {
         setCart(updatedCart);
     };
 
-    // 3. Calculate Total Price: Uses reduce to sum up (price * quantity) for all items.
     const totalPrice = cart.reduce((total, product) => {
         const itemPrice = getNumericPrice(product);
         const itemQuantity = getNumericQuantity(product);
@@ -43,9 +37,7 @@ const Cart = ({ cart, setCart }) => {
     }, 0);
 
 
-    // --- Component Rendering ---
 
-    // Display message if the cart is empty
     if (cart.length === 0) {
         return (
             <div className="d-flex justify-content-center align-items-center" style={{ height: "80vh" }} >
@@ -86,12 +78,10 @@ const Cart = ({ cart, setCart }) => {
 
             <div className="row justify-content">
                 {cart.map((product) => (
-                    // Outer column ensures cards stack vertically (col-12)
                     <div className=" col-12 mb-3 px-3 px-md-5" key={product.id}>
                         <div className="card shadow-sm">
                             <div className="row g-0 align-items-center">
 
-                                {/* Image Column (3/12 width on medium screens and up) */}
                                 <div className="col-md-3">
                                     <img
                                         src={product.image}
@@ -101,7 +91,6 @@ const Cart = ({ cart, setCart }) => {
                                     />
                                 </div>
 
-                                {/* Details Column (5/12 width) */}
                                 <div className="col-md-5">
                                     <div className="card-body py-2">
                                         <h5 className="card-title">{product.title}</h5>
@@ -115,7 +104,7 @@ const Cart = ({ cart, setCart }) => {
                                     </div>
                                 </div>
 
-                                {/* Quantity and Action Column (4/12 width) */}
+                
                                 <div className="col-md-4 d-flex align-items-center justify-content-around p-3">
 
                                     {/* Quantity Controls */}

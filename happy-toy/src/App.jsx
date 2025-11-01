@@ -12,6 +12,7 @@ import Search from './components/Search.jsx';
 import Cart from './components/Cart.jsx';
 import Profile from './components/Profile.jsx';
 import HomePage from './components/HomePage.jsx';
+import Shop from './components/Shop.jsx';
 
 function App() {
   const [data, setData] = useState([...items]);
@@ -29,6 +30,7 @@ function App() {
       <Route path="/search/:term" element={<Search />} />
       <Route path="/cart" element={<Cart cart={cart} setCart={setCart}/>} />
       <Route path="/profile" element={<Profile />} />
+      <Route path="/shop" element={<Shop cart={cart} setCart={setCart} />} />
     </Routes> 
     </Router>
     <Footer />
