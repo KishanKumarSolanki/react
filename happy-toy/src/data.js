@@ -16,6 +16,13 @@ import rcHelicopter from './assets/rchelicopter.png';
 import rcBoat from './assets/rcboat.png';
 import rcjcb from './assets/rcjcb.png';
 import rcMonsterTruck from './assets/rcmonstertruck.png';
+import chess from './assets/chess.png';
+import monopoly from './assets/monopoly.png';
+import scrabble from './assets/scrabble.jpg';
+import catan from './assets/catan.jpg';
+import ticketToRide from './assets/tickettoride.png';
+import ludo from './assets/ludo.jpg';
+
 
  const items = [];
 export const softToys = [
@@ -190,5 +197,62 @@ export const rcToys = [
   }
 ];
 
+export const boardGames = [
+  {
+    id: '1',
+    title: 'Chess Set',
+    description: 'A classic chess set for strategic gameplay.',
+    image: chess,
+    details: 'This beautifully crafted chess set includes a wooden board and intricately designed pieces. Perfect for players of all ages.',
+    price: 199.00,
+    category: 'board-games'
+  },
+  {
+    id: '2',
+    title: 'Monopoly',
+    description: 'A classic board game of buying and trading properties.',
+    image: monopoly,
+    details: 'This Monopoly set includes a game board, property cards, and play money. Perfect for family game nights.',
+    price: 299.00,
+    category: 'board-games'
+  },
+  {
+    id: '3',
+    title: 'Scrabble',
+    description: 'A classic word game for crossword enthusiasts.',
+    image: scrabble,
+    details: 'This Scrabble set includes a game board, letter tiles, and scoring rules. Perfect for family game nights and improving vocabulary.',
+    price: 249.00,
+    category: 'board-games'
+  },
+  {
+    id: '4',
+    title: 'Catan',
+    description: 'A popular board game about trading and building.',
+    image: catan,
+    details: 'In Catan, players collect resources and use them to build roads, settlements, and cities. The game involves strategy, negotiation, and a bit of luck.',
+    price: 349.00,
+    category: 'board-games'
+  },
+  {
+    id: '5',
+    title: 'Ticket to Ride',
+    description: 'A railway-themed board game about building train routes.',
+    image: ticketToRide,
+    details: 'In Ticket to Ride, players collect train cards to claim railway routes on a map. The game is easy to learn but offers strategic depth.',
+    price: 399.00,
+    category: 'board-games'
+  },
+  {
+    id: '6',
+    title: 'Ludo',
+    description: 'A classic board game for 2-4 players.',
+    image: ludo,
+    details: 'This Ludo set includes a colorful game board and four sets of playing pieces. The game is simple to learn and perfect for family fun.',
+    price: 149.00,
+    category: 'board-games'
+  },
+
+];
 
 export default items;

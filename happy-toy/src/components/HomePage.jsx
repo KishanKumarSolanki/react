@@ -1,15 +1,16 @@
 import React from 'react';
 import Card from './Card.jsx';
-import { softToys, educationalToys, rcToys } from '../data';
+import { softToys, educationalToys, rcToys, boardGames } from '../data';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Slider from './Slider.jsx';
 
-const HomePage = ({ cart, setCart }) => {
+const HomePage = ({ cart ,setCart }) => {
 
 
 
   return (
+    <>
     <div className="main-content">
       <ToastContainer />
       <Slider />
@@ -44,7 +45,18 @@ const HomePage = ({ cart, setCart }) => {
         setCart={setCart}
         limit={4}
       />
+
+      <hr className="my-5" />
+
+      <Card
+        title="🎲 Board Games Section"
+        items={boardGames}
+        cart={cart}
+        setCart={setCart}
+        limit={4}
+      />
     </div>
+    </>
   );
 };
 

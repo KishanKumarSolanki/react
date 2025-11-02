@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card.jsx';
-import { softToys, educationalToys, rcToys } from '../data';
+import { softToys, educationalToys, rcToys,boardGames } from '../data';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -8,12 +8,12 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Shop = ({ cart, setCart }) => {
 
- 
+
 
   return (
     <div className="main-content">
       <ToastContainer />
-      
+
 
 
       <Card
@@ -42,6 +42,16 @@ const Shop = ({ cart, setCart }) => {
         cart={cart}
         setCart={setCart}
       />
+
+      <hr className="my-5" />
+
+      <Card
+        title="🎲 Board Games Section"
+        items={boardGames}
+        cart={cart}
+        setCart={setCart}
+      />
+
     </div>
   );
 };
