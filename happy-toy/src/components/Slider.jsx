@@ -3,55 +3,46 @@ import Carousel from 'react-bootstrap/Carousel';
 import banner from '../assets/banner.png';
 import banner1 from '../assets/banner1.png';
 import banner2 from '../assets/banner2.png';
-
+import './Slider.css';
 
 function Slider() {
   return (
-    <div style={{ 
-        width: '100%', 
-        maxWidth: '1400px', 
-        maxHeight: '800px',
-        margin: 'auto', 
-        marginTop: '0px', 
-        overflow: 'hidden' 
-      }}>
-      <Carousel
+    <div className="slider-container">
+      <Carousel 
         interval={2000}
         pause="hover"
+        controls={false}
+        indicators={false}
       >
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="d-block w-100 carousel-img"
             src={banner}
             alt="First slide"
-            style={{ maxHeight: '800px', objectFit: 'cover' }}
+          
           />
-
-          <Carousel.Caption>
-          </Carousel.Caption>
+          
         </Carousel.Item>
 
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="d-block w-100 carousel-img"
             src={banner1}
             alt="Second slide"
-            style={{ maxHeight: '800px', objectFit: 'cover' }}
+     
           />
-          <Carousel.Caption>
-          </Carousel.Caption>
+          
         </Carousel.Item>
 
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="d-block w-100 carousel-img"
             src={banner2}
             alt="Third slide"
-            style={{ maxHeight: '800px', objectFit: 'cover' }}
+        
           />
-          <Carousel.Caption>
-
-          </Carousel.Caption>
+       
+         
         </Carousel.Item>
       </Carousel>
     </div>

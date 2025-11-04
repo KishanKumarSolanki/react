@@ -1,0 +1,31 @@
+/* Default styles for larger screens */
+.slider-container {
+    width: 100%; 
+    max-width: 1400px; /* Desktop max width */
+    max-height: 1000px;
+    margin: auto;
+    overflow: hidden;
+    /* Extra gap hatane ke liye padding zero rakhein */
+    padding: 0; 
+}
+
+.carousel-img {
+    max-height: 800px; /* Desktop max height */
+    object-fit: cover;
+    /* Gap hatane ke liye zaroori */
+    display: block; 
+    margin: 0;
+}
+
+/* --- Mobile View Adjustments --- */
+@media (max-width: 768px) {
+    .slider-container {
+        max-width: 100%; 
+        max-height: 500px; 
+    }
+
+    .carousel-img {
+        /* Mobile view height */
+        max-height: 500px; 
+    }
+}
