@@ -20,7 +20,7 @@ import chess from './assets/chess.png';
 import monopoly from './assets/monopoly.png';
 import scrabble from './assets/scrabble.jpg';
 import catan from './assets/catan.jpg';
-import ticketToRide from './assets/tickettoride.png';
+import ride from './assets/ride.png';
 import ludo from './assets/ludo.jpg';
 
 
@@ -238,7 +238,7 @@ export const boardGames = [
     id: '5',
     title: 'Ticket to Ride',
     description: 'A railway-themed board game about building train routes.',
-    image: ticketToRide,
+    image: ride,
     details: 'In Ticket to Ride, players collect train cards to claim railway routes on a map. The game is easy to learn but offers strategic depth.',
     price: 399.00,
     category: 'board-games'
