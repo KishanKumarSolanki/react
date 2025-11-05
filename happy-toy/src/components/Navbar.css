@@ -1,4 +1,4 @@
-
+/* Navbar.css - FINAL FIXED VERSION */
 .navbar-custom {
     background: linear-gradient(135deg, #a0d2eb 0%, #e5eaf5 100%) !important;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -14,7 +14,6 @@
 
 .navbar-spacer {
     height: 60px;
-    
 }
 
 .navbar-brand-custom {
@@ -148,18 +147,56 @@
 
 /* Mobile view adjustments */
 @media (max-width: 991.98px) {
+    /* --- NEW 3-PART HEADER ALIGNMENT (Toggler Left, Brand Center, Icons Right) --- */
+    
+    /* 1. Container ko space-between set karein */
+    .navbar-custom .container-fluid {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        width: 100%;
+        position: relative;
+        padding-left: 1rem; 
+        padding-right: 1rem;
+    }
+
+    /* 2. Brand/Logo (Center) */
+    .brand-container-mobile { 
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2; 
+    }
+    
+    /* 3. Toggler (Left) */
+    .navbar-toggler-custom {
+        order: -1; /* Hamesha first element (left) */
+        margin-right: 0; 
+        z-index: 3;
+    }
+    
+    /* 4. Icons Container (Right) */
+    .mobile-header-icons {
+        order: 1; /* Hamesha last element (right) */
+        z-index: 3;
+    }
+    
+    /* Icons ke size adjust karein header mein */
+    .mobile-header-icons .icon-button-custom {
+        width: 35px; 
+        height: 35px;
+    }
+
+    /* 5. Mobile Menu Styles */
     .navbar-nav {
         text-align: center;
         margin-bottom: 20px;
+        margin: 1rem 0 !important;
+        width: 100%;
     }
 
     .nav-item {
         margin: 10px 0;
-    }
-
-    .mobile-actions {
-        flex-direction: column;
-        gap: 15px;
     }
 
     .search-container {
@@ -171,13 +208,7 @@
         width: 100% !important;
     }
 
-    /* Navigation links on small screens */
-    .navbar-nav {
-        margin: 1rem 0 !important;
-        text-align: center;
-        width: 100%;
-    }
-
+    /* Navigation links styling */
     .nav-link-custom {
         margin: 0.25rem 0;
         padding: 0.75rem;
@@ -188,28 +219,19 @@
     .nav-link-custom:hover {
         background: rgba(255, 255, 255, 0.4);
     }
-
-    /* Adjust search and icon container for mobile */
-    .navbar-collapse .d-flex.align-items-center {
+    
+    /* Collapse Menu Actions (Search/Icons) ko target karein */
+    .navbar-collapse-custom .d-flex.align-items-center.mobile-actions {
+        display: flex !important; 
         flex-direction: column;
         align-items: stretch !important;
         width: 100%;
-    }
-
-    /* Icon buttons on mobile */
-    .icon-button-custom {
-        padding: 0.75rem;
-        width: 100%;
-        border-radius: 0.5rem;
-        justify-content: center;
-        background: rgba(255, 255, 255, 0.3);
-    }
-
-    /* Align cart and user icons in a row on mobile */
-    .navbar-collapse .d-flex {
-        width: 100%;
-        justify-content: space-around;
         margin-top: 1rem;
+    }
+    
+    /* Collapse menu ke andar wale icons ko chhupa dein (kyunki woh ab header mein hain) */
+    .mobile-actions .d-flex.d-none.d-lg-flex {
+        display: none !important;
     }
 }
 
