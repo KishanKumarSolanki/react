@@ -24,7 +24,41 @@ import ride from './assets/ride.png';
 import ludo from './assets/ludo.jpg';
 
 
- const items = [];
+const items = [];
+export const testItems = [
+  {
+    quote: "My son **Aarav** absolutely loves the building blocks! It keeps him engaged for hours. The quality is solid and safe.",
+    name: "Pooja V."
+  },
+  {
+    quote: "The **Ludo board** is beautifully crafted. It brought back so many childhood memories. Perfect for family game night!",
+    name: "Rohan S."
+  },
+  {
+    quote: "Fantastic range of educational toys! My daughter **Siya** learned her alphabets much faster using your magnetic letters.",
+    name: "Meenakshi K."
+  },
+  {
+    quote: "Quick delivery and the packaging was adorable! The plush toy is super soft, exactly as shown on the website.",
+    name: "Zainab B."
+  },
+  {
+    quote: "Great value pack! Bought the art supplies kit, and the colors are vibrant and non-toxic. A hit with the kids!",
+    name: "Deepak C."
+  },
+  {
+    quote: "Customer support was very helpful in recommending an age-appropriate toy for my niece. The robot toy is amazing!",
+    name: "Anjali P."
+  },
+  {
+    quote: "The wooden puzzle is very durable, even after being chewed on a few times! Excellent quality control.",
+    name: "Kabir M."
+  },
+  {
+    quote: "The checkout process was super smooth, and I received the tracking details immediately. Will definitely buy more toys here.",
+    name: "Geeta N."
+  }
+];
 export const softToys = [
   {
     id: '1',
@@ -91,8 +125,8 @@ export const softToys = [
   },
 
 ];
-export const educationalToys = [ 
-  
+export const educationalToys = [
+
   {
     id: '1',
     title: 'STEM Kits',

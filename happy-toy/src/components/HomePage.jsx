@@ -1,14 +1,12 @@
 import React from 'react';
 import Card from './Card.jsx';
-import { softToys, educationalToys, rcToys, boardGames } from '../data';
+import { softToys, educationalToys, rcToys, boardGames, testItems } from '../data';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Slider from './Slider.jsx';
+import {InfiniteMovingCards} from './ui/infinite-moving-cards.jsx';
 
 const HomePage = ({ cart ,setCart }) => {
-
-
-
   return (
     <>
     <div className="main-content">
@@ -55,6 +53,10 @@ const HomePage = ({ cart ,setCart }) => {
         setCart={setCart}
         limit={4}
       />
+      <hr className="my-5" />
+      <h2 style={{ textAlign: "center", fontSize: "2rem", margin: "2rem 0" }}>What Our Customers Say</h2>
+      <InfiniteMovingCards items={testItems} />
+      <hr className="my-5" />
     </div>
     </>
   );
