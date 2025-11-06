@@ -53,6 +53,16 @@ export const InfiniteMovingCards = ({
       }
     }
   };
+
+  const [isPaused, setIsPaused] = useState(false);
+  const handleTouchStart = () => {
+    setIsPaused(true);
+  }
+  const handleTouchEnd = () => {
+    setIsPaused(false);
+  };
+
+
   return (
     <div
       ref={containerRef}
@@ -65,8 +75,19 @@ export const InfiniteMovingCards = ({
         className={cn(
           "flex w-max min-w-full shrink-0 flex-nowrap gap-4 py-4",
           start && "animate-scroll",
-          pauseOnHover && "hover:[animation-play-state:paused]"
-        )}>
+          // Pause on Hover
+          pauseOnHover && "hover:[animation-play-state:paused]",
+          // NEW: Pause on Touch
+          isPaused && "[animation-play-state:paused]" // New class to pause animation
+        )}
+        // --- EVENT HANDLERS ---
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+        // If you want hover logic for desktop, keep these
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+        // -----------------------------
+      >
         {items.map((item, idx) => (
           <li
             className="relative w-[350px] max-w-full shrink-0 rounded-2xl border border-b-0 border-zinc-200 bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] px-8 py-6 md:w-[450px] dark:border-zinc-700 dark:bg-[linear-gradient(180deg,#27272a,#18181b)]"
