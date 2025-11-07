@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import items from '../data.js';
 import Card from './Card.jsx';
 
@@ -11,7 +11,7 @@ const Search = () => {
         const filtered = () =>{
             const data = items.filter((c)=>c.title.toLowerCase().includes(term.toLowerCase()));
             setFilter(data);
-        }
+        };
         filtered();
     }, [term])
   return (
@@ -19,4 +19,4 @@ const Search = () => {
   )
 }
 
-export default Search
+export default Search;
