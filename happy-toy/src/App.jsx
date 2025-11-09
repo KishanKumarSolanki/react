@@ -14,7 +14,7 @@ import Profile from './components/Profile.jsx';
 import HomePage from './components/HomePage.jsx';
 import Shop from './components/Shop.jsx';
 import ScrollToTop from './components/Scroll.jsx';
-
+import CheckoutPage from './components/CheckOutPage.jsx';
 function App() {
   const [data, setData] = useState([...items]);
   const [cart, setCart] = useState([])
@@ -33,6 +33,7 @@ function App() {
           <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/shop" element={<Shop cart={cart} setCart={setCart} />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
         </Routes>
       </Router>
       <Footer />

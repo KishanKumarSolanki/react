@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Card.css'; 
+import './Card.css';
 import { toast, Bounce } from 'react-toastify';
 
 const Card = ({ title, items, cart, setCart, limit = 0 }) => {
@@ -20,8 +20,8 @@ const Card = ({ title, items, cart, setCart, limit = 0 }) => {
     return null;
   }
 
-  const itemsToDisplay = (limit !== null && limit > 0) 
-    ? items.slice(0, limit) 
+  const itemsToDisplay = (limit !== null && limit > 0)
+    ? items.slice(0, limit)
     : items;
 
   return (
@@ -31,7 +31,9 @@ const Card = ({ title, items, cart, setCart, limit = 0 }) => {
         {itemsToDisplay.map((item) => (
           <div className="card custom-card" key={item.id}>
             <div className="card-image-container">
-              <img src={item.image} className="card-img-top" alt={item.title} />
+              <Link to={`/product/${item.id}`}>
+                <img src={item.image} className="card-img-top" alt={item.title} />
+              </Link>
             </div>
             <div className="card-body">
               <h5 className="card-title">{item.title}</h5>
