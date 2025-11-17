@@ -128,7 +128,7 @@ export const softToys = [
 export const educationalToys = [
 
   {
-    id: '1',
+    id: '8',
     title: 'STEM Kits',
     description: 'Focus on Science, Technology, Engineering, and Mathematics.',
     image: stem,
@@ -137,7 +137,7 @@ export const educationalToys = [
     category: 'educational-toys'
   },
   {
-    id: '2',
+    id: '9',
     title: 'Puzzles',
     description: 'Develop problem-solving, logic, and hand-eye coordination.',
     image: puzzles,
@@ -146,7 +146,7 @@ export const educationalToys = [
     category: 'educational-toys'
   },
   {
-    id: '3',
+    id: '10',
     title: 'Building Blocks',
     description: 'Encourage creativity, problem-solving, and fine motor skills.',
     image: math,
@@ -155,7 +155,7 @@ export const educationalToys = [
     category: 'educational-toys'
   },
   {
-    id: '4',
+    id: '11',
     title: 'Counting Toys',
     description: 'Help with number recognition, basic arithmetic, and logical thinking.',
     image: counting,
@@ -164,7 +164,7 @@ export const educationalToys = [
     category: 'educational-toys'
   },
   {
-    id: '5',
+    id: '12',
     title: 'Magnetic Building Tiles',
     description: 'Colorful magnetic tiles for creative and open-ended construction play.',
     image: magnetictiles,
@@ -173,7 +173,7 @@ export const educationalToys = [
     category: 'educational-toys'
   },
   {
-    id: '6',
+    id: '13',
     title: 'India Map Puzzle',
     description: 'A large, floor-sized puzzle that teaches geography and India cultures.',
     image: mappuzzles,
@@ -185,7 +185,7 @@ export const educationalToys = [
 
 export const rcToys = [
   {
-    id: '1',
+    id: '14',
     title: 'Remote Control Car',
     description: 'A fast and fun remote control car for kids.',
     image: rccar,
@@ -194,7 +194,7 @@ export const rcToys = [
     category: 'rc-toys'
   },
   {
-    id: '2',
+    id: '15',
     title: 'RC Helicopter',
     description: 'A stable and easy-to-fly remote control helicopter.',
     image: rcHelicopter,
@@ -203,7 +203,7 @@ export const rcToys = [
     category: 'rc-toys'
   },
   {
-    id: '3',
+    id: '16',
     title: 'RC Boat',
     description: 'A high-speed remote control boat for water adventures.',
     image: rcBoat,
@@ -212,7 +212,7 @@ export const rcToys = [
     category: 'rc-toys'
   },
   {
-    id: '4',
+    id: '17',
     title: 'RC JCB',
     description: 'A powerful remote control JCB for construction fun.',
     image: rcjcb,
@@ -221,7 +221,7 @@ export const rcToys = [
     category: 'rc-toys'
   },
   {
-    id: '5',
+    id: '18',
     title: 'RC Monster Truck',
     description: 'A rugged remote control monster truck for off-road adventures.',
     image: rcMonsterTruck,
@@ -233,7 +233,7 @@ export const rcToys = [
 
 export const boardGames = [
   {
-    id: '1',
+    id: '19',
     title: 'Chess Set',
     description: 'A classic chess set for strategic gameplay.',
     image: chess,
@@ -242,7 +242,7 @@ export const boardGames = [
     category: 'board-games'
   },
   {
-    id: '2',
+    id: '20',
     title: 'Monopoly',
     description: 'A classic board game of buying and trading properties.',
     image: monopoly,
@@ -251,7 +251,7 @@ export const boardGames = [
     category: 'board-games'
   },
   {
-    id: '3',
+    id: '21',
     title: 'Scrabble',
     description: 'A classic word game for crossword enthusiasts.',
     image: scrabble,
@@ -260,7 +260,7 @@ export const boardGames = [
     category: 'board-games'
   },
   {
-    id: '4',
+    id: '22',
     title: 'Catan',
     description: 'A popular board game about trading and building.',
     image: catan,
@@ -269,7 +269,7 @@ export const boardGames = [
     category: 'board-games'
   },
   {
-    id: '5',
+    id: '23',
     title: 'Ticket to Ride',
     description: 'A railway-themed board game about building train routes.',
     image: ride,
@@ -278,7 +278,7 @@ export const boardGames = [
     category: 'board-games'
   },
   {
-    id: '6',
+    id: '24',
     title: 'Ludo',
     description: 'A classic board game for 2-4 players.',
     image: ludo,

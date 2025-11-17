@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom'; // Link को इम्पोर्ट करना सुनिश्चित करें
-import { softToys, educationalToys, rcToys, boardGames } from '../data.js';
+import { useParams, Link } from 'react-router-dom'; 
+import items, { softToys, educationalToys, rcToys, boardGames } from '../data.js';
 import './ProductDetails.css';
 import Card from './Card.jsx';
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const ProductDetails = ({ cart, setCart }) => {
-  const { id } = useParams(); // URL से ID प्राप्त करें (यह स्ट्रिंग होगी)
+  const { id } = useParams(); 
   const [product, setProduct] = useState(null);
   const [relatedProducts, setRelatedProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -38,7 +38,7 @@ const ProductDetails = ({ cart, setCart }) => {
     window.scrollTo(0, 0);
     setLoading(true);
 
-    const allProducts = [...softToys, ...educationalToys, ...rcToys, ...boardGames];
+    const allProducts = items;
 
   
     const productIdNum = parseInt(id);
