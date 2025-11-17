@@ -24,7 +24,7 @@ import ride from './assets/ride.png';
 import ludo from './assets/ludo.jpg';
 
 
-const items = [];
+
 export const testItems = [
   {
     quote: "My son **Aarav** absolutely loves the building blocks! It keeps him engaged for hours. The quality is solid and safe.",
@@ -288,5 +288,7 @@ export const boardGames = [
   },
 
 ];
+
+const items = [...softToys, ...educationalToys, ...rcToys, ...boardGames];
 
 export default items;
