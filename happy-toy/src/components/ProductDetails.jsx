@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom'; 
-import items, { softToys, educationalToys, rcToys, boardGames } from '../data.js';
+import items from '../data.js';
 import './ProductDetails.css';
 import Card from './Card.jsx';
 import { ToastContainer, toast, Bounce } from 'react-toastify';

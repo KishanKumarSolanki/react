@@ -56,7 +56,7 @@ const HomePage = ({ cart ,setCart }) => {
       <hr className="my-5" />
       <h2 style={{ textAlign: "center", fontSize: "2rem", margin: "2rem 0" }}>What Our Customers Say</h2>
       <InfiniteMovingCards items={testItems} />
-      <hr className="my-5" />
+      {/* <hr className="my-5" /> */}
     </div>
     </>
   );

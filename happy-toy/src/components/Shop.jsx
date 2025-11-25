@@ -11,6 +11,7 @@ const Shop = ({ cart, setCart }) => {
 
 
   return (
+    <>
     <div className="main-content">
       <ToastContainer />
 
@@ -53,6 +54,7 @@ const Shop = ({ cart, setCart }) => {
       />
 
     </div>
+    </>
   );
 };
 
