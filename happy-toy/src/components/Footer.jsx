@@ -39,7 +39,7 @@ const Footer = () => {
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About Us</a></li>
                 <li><a href="/products">Products</a></li>
-                <li><a href="/categories">Categories</a></li>
+                <li><a href="/shop">Categories</a></li>
                 <li><a href="/contact">Contact</a></li>
               </ul>
             </div>
@@ -70,7 +70,7 @@ const Footer = () => {
                 </div>
                 <div className="contact-item">
                   <FaEnvelope className="contact-icon" />
-                  <span>happytoysofficial@gmail.com</span>
+                  <span>happytoys@gmail.com</span>
                 </div>
               </div>
 
