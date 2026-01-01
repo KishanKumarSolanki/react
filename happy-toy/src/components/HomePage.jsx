@@ -7,7 +7,7 @@ import Slider from './Slider.jsx';
 import {InfiniteMovingCards} from './ui/infinite-moving-cards.jsx';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { faMessage } from "@fortawesome/free-solid-svg-icons";
+// import { faMessage } from "@fortawesome/free-solid-svg-icons";
 
 const HomePage = ({ cart ,setCart }) => {
   return (
@@ -61,12 +61,12 @@ const HomePage = ({ cart ,setCart }) => {
       <InfiniteMovingCards items={testItems} />
       {/* <hr className="my-5" /> */}
     </div>
-    {/* <div className='fixed-bottom right-100 p-3' style={{ zIndex: 20, left: "initial" }}>
+    <div className='fixed-bottom right-100 p-3' style={{ zIndex: 20, left: "initial" }}>
       <a href="https://wa.me/8368158444?text=Hi! I am interested in your toys. Please share details." className="whatsapp-float" target="_blank" rel="noopener noreferrer">
-        <FontAwesomeIcon icon={faWhatsapp} size="5x" color="#25D366" style={{backgroundColor: "white", borderRadius: '5px'}} />
+        <FontAwesomeIcon icon={faWhatsapp} size="3x" color="#25D366"  />
       </a>
     </div>
-    <div className='fixed-bottom left-100 p-3' style={{ zIndex: 20, right: "initial" }}>
+    {/* <div className='fixed-bottom left-100 p-3' style={{ zIndex: 20, right: "initial" }}>
       <a href="sms:8368158444?text=Hi! I am interested in your toys. Please share details." className="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faMessage} size="5x" color="blue" style={{backgroundColor: "white", borderRadius: '5px'}} />
       </a>
